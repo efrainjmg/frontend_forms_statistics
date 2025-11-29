@@ -1,0 +1,12 @@
+.stats-chart-container {
+    width: 100%;
+    margin-top: var(--spacing-md);
+}
+
+/* Custom tooltip styling is handled in the component */
+
+@media (max-width: 768px) {
+    .stats-chart-container {
+        font-size: 0.8rem;
+    }
+}

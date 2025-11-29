@@ -1,0 +1,175 @@
+.redirect-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-md);
+}
+
+.redirect-container {
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+}
+
+.redirecting-header {
+    margin-bottom: var(--spacing-xl);
+}
+
+.redirect-icon {
+    font-size: 4rem;
+    margin-bottom: var(--spacing-sm);
+    animation: bounce 1s ease-in-out infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.redirect-title {
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.countdown-circle {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto var(--spacing-lg);
+}
+
+.progress-ring {
+    transform: rotate(-90deg);
+}
+
+.progress-ring-bg {
+    fill: none;
+    stroke: var(--bg-tertiary);
+    stroke-width: 8;
+}
+
+.progress-ring-fill {
+    fill: none;
+    stroke: url(#gradient);
+    stroke-width: 8;
+    stroke-linecap: round;
+    stroke-dasharray: 565.48;
+    transition: stroke-dashoffset 1s linear;
+}
+
+/* Add gradient definition */
+.progress-ring::before {
+    content: '';
+    position: absolute;
+}
+
+.countdown-number {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    font-weight: 800;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: pulse 1s ease-in-out infinite;
+}
+
+.redirect-message {
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-secondary);
+}
+
+.redirect-message strong {
+    color: var(--primary-light);
+    font-weight: 700;
+}
+
+.destination-info {
+    padding: var(--spacing-md);
+    background: var(--bg-secondary);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-md);
+    margin: var(--spacing-md) 0;
+    word-break: break-all;
+}
+
+.destination-url {
+    display: inline-block;
+    margin-top: var(--spacing-xs);
+    color: var(--primary-light);
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.destination-url:hover {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+/* Error State */
+.error-container {
+    padding: var(--spacing-xl);
+}
+
+.error-icon-large {
+    font-size: 6rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.error-title {
+    color: var(--error);
+    margin-bottom: var(--spacing-sm);
+}
+
+.error-description {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-lg);
+}
+
+.error-actions {
+    display: flex;
+    gap: var(--spacing-sm);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Loading State */
+.loading-text {
+    margin-top: var(--spacing-md);
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+    .redirect-icon {
+        font-size: 3rem;
+    }
+
+    .countdown-circle {
+        width: 150px;
+        height: 150px;
+    }
+
+    .countdown-number {
+        font-size: 3rem;
+    }
+
+    .error-icon-large {
+        font-size: 4rem;
+    }
+}

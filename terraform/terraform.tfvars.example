@@ -1,0 +1,8 @@
+# Example values - Copy this file to terraform.tfvars and update with your values
+bucket_name  = "url-shortener-frontend-unique-name-12345"
+aws_region   = "us-east-1"
+environment  = "production"
+
+# Optional: Uncomment and set these if using a custom domain
+# domain_name          = "short.yourdomain.com"
+# acm_certificate_arn  = "arn:aws:acm:us-east-1:123456789012:certificate/xxx"
